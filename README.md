@@ -7,9 +7,10 @@
 **Swift** 
 - [swift란(역사,버전)](https://github.com/JiHoonAHN/TIL/blob/main/%20swift/history%20of%20swift.md)
 - [문법](https://github.com/JiHoonAHN/TIL/blob/main/%20swift/swift_Grammar.md)
-- [Storyboard란]()
-- [Snapkit]()
-- [Autolayout]()
+- [Storyboard란](https://github.com/JiHoonAHN/TIL/blob/main/%20swift/what%20is%20Storyboard.md)
+- [Autolayout](https://github.com/JiHoonAHN/TIL/blob/main/%20swift/autoLayout.md)
+- [Snapkit](https://github.com/JiHoonAHN/TIL/blob/main/%20swift/snapkit.md)
+
 
 ------
 **RXSwift**
