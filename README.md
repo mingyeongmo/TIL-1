@@ -5,8 +5,11 @@
 ##  분류 
 
 **Swift** 
-- [swift란(역사,버전)](https://github.com/JiHoonAHN/TIL/blob/main/history%20of%20swift.md)
+- [swift란(역사,버전)](https://github.com/JiHoonAHN/TIL/blob/main/%20swift/history%20of%20swift.md)
 - [문법](https://github.com/JiHoonAHN/TIL/blob/main/%20swift/swift_Grammar.md)
+- [Storyboard란]()
+- [Snapkit]()
+- [Autolayout]()
 
 ------
 **RXSwift**
@@ -14,12 +17,3 @@
 - [RxSwift를 쓰면 좋은 점](https://github.com/JiHoonAHN/TIL/blob/main/Rxswift/Advantages%20of%20using%20RxSwift.md)
 - 문법
 
-
-### FireBase
-- FireBase SDK
-
-
-
-
-### Docker
-- Docker
