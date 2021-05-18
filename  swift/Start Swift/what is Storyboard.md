@@ -12,3 +12,20 @@ object library 버튼을 클릭하여 생성하는데 오른쪽 상단 동그란
 identity inspector 에서 swift 파일과 연결시켜줄 수 있다.
 
 <img width="258" alt="_2021-04-11__4 49 28" src="https://user-images.githubusercontent.com/68891494/118479869-7e579a80-b74c-11eb-9458-f813cadcdaca.png">
+
+<br>
+<br>
+
+-----------
+Xcode의 ‘Add Editor On Right’ 버튼을 클릭해 화면을 여러 개로 나누어 스토리보드, swift 파일을 동시에 볼 수 있습니다.
+
+<img width="1792" alt="스크린샷 2021-05-18 오전 11 16 30" src="https://user-images.githubusercontent.com/68891494/118580250-8ce49700-b7ca-11eb-9b64-6fe55a2478cf.png">
+
+<br>
+
+Add Editor On Right > Assistant 을 누르면 된다.
+
+<br>
+
+
+<img width="1792" alt="스크린샷 2021-05-18 오전 11 18 55" src="https://user-images.githubusercontent.com/68891494/118580714-51969800-b7cb-11eb-90bf-f4facf86f768.png">
