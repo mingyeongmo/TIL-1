@@ -87,4 +87,14 @@ Train 버튼을 눌러주면
 <img width="1429" alt="스크린샷 2021-05-23 오전 2 30 07" src="https://user-images.githubusercontent.com/68891494/119235743-fff56100-bb6e-11eb-8594-169bbb96a758.png">
 
 Testing이 된다.
+## 정확성을 올리는 방법
 
+<img width="860" alt="스크린샷 2021-05-23 오전 3 21 21" src="https://user-images.githubusercontent.com/68891494/119237076-fd4a3a00-bb75-11eb-9f6c-de5dc2920280.png">
+
+Parameters 에는 Maximum Iterations의 갯수를 늘려서 정확성을 올릴 수 있다. 자료를 몇번 반복해서 학습할 것인지 입력하는 것이다.
+
+[Validation Accuracy](https://developer.apple.com/documentation/createml/improving_your_model_s_accuracy)
+
+<img width="862" alt="스크린샷 2021-05-23 오전 3 37 26" src="https://user-images.githubusercontent.com/68891494/119237533-469b8900-bb78-11eb-9679-c5666fad2436.png">
+
+Augmentation Data를 선택해서 정확성을 올릴 수 있다.
