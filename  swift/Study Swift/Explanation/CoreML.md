@@ -93,8 +93,84 @@ Testing이 된다.
 
 Parameters 에는 Maximum Iterations의 갯수를 늘려서 정확성을 올릴 수 있다. 자료를 몇번 반복해서 학습할 것인지 입력하는 것이다.
 
-[Validation Accuracy](https://developer.apple.com/documentation/createml/improving_your_model_s_accuracy)
+[Augmentations](https://developer.apple.com/documentation/createml/improving_your_model_s_accuracy)
 
 <img width="862" alt="스크린샷 2021-05-23 오전 3 37 26" src="https://user-images.githubusercontent.com/68891494/119237533-469b8900-bb78-11eb-9679-c5666fad2436.png">
 
 Augmentation Data를 선택해서 정확성을 올릴 수 있다.
+
+------
+Precision & Recall
+
+Precision : 머신러닝 모델이 진짜 Data와 일치하는 것이 몇개인지 퍼센트로 나타낸것 (정밀도), 예측에 맞는것은 몇개인지 라고 이야기 하는것
+
+Recall : 전체 중에 실제로 맞은 Data는 몇개인지 알려주는것, 진짜 Data중에 몇개를 맞췄냐를 Recall 이라고 한다.(재현율)
+
+-------
+## Code
+먼저 모델을 만들어 넣었는데 실제로 접근할수 있는 객체로 만들어 줘야 한다. 모델 자체가 image Classifier 같은 경우에는 vision이라는 CoreML에서 이미지를 도와주는 공구함의 도움을 받아서 모델을 감쌀수 있다.
+
+```swift
+import Vision
+```
+이미지를 가지고 개 인지 고양이인지 구분하는 모델이기 때문에
+```swift
+let model = try VNCoreMLModel(for: DogCatClassifier().model)
+```
+그렇게 모델을 객체로 만들고 모델을 통해서 사진 찍은거와 사진 불러온것을 Request해야한다.
+```swift
+let request = VNCoreMLRequest(model: model, completionHandler: {[weak self] request, error in
+    self?.processClassifications(for: request, error : error)
+})
+```
+이 객체를 통해서 실제로 ML모델의 예측결과를 받아볼 수 있다.
+request가 보내지고 나서 그 Request에 대한 핸들러는 클로저로 받는다. 
+```swift
+func processClassifications(for request: VNRequest, error: Error?) {
+        DispatchQueue.main.async {
+            guard let results = request.results else {
+                self.classificationLabel.text = "Unable to classify image.\n\(error!.localizedDescription)"
+                return
+            }
+            // The `results` will always be `VNClassificationObservation`s, as specified by the Core ML model in this project.
+            let classifications = results as! [VNClassificationObservation]
+        
+            if classifications.isEmpty {
+                self.classificationLabel.text = "Nothing recognized."
+            } else {
+                // Display top classifications ranked by confidence in the UI.
+                let topClassifications = classifications.prefix(2)
+                let descriptions = topClassifications.map { classification in
+                    // Formats the classification for display; e.g. "(0.37) cliff, drop, drop-off".
+                   return String(format: "  (%.2f) %@", classification.confidence, classification.identifier)
+                }
+                self.classificationLabel.text = "Classification:\n" + descriptions.joined(separator: "\n")
+            }
+        }
+    }
+    
+```
+
+클로저를 받으면 그것을 처리하는 메서드이다. VNRequest인 비전의 Request를 받아서 밑에서 처리 해주고 처음에 CoreML 모델에 대해서 SetUp을 해주는 것이다.
+첫번째로는 모델의 객체를 만들고 그 모델에 보낼 Request객체를 또 만들어 주는것이다. Request객체를 만들때는 모델도 필요하고 Request가 예측된 CompletionHandler를 같이 코드를 작성해줘야 한다. Request자체가 이미지 관련 Request이다. 이미지에서는 사진을 뒤집어 보면 거꾸로된 이미지를 가지고 하면 Orientation을 맞춰줘야 하기 때문에 Orientation을 처리하고 이미지가 모델한테 예측해달라고 할때 그 이미지가 원래 머신러닝에 사용하는 이미지 보다 클수도 있고 조금 비율이 다를 수도 있다. 그럴때 어떻게 할지 나타내는 프로퍼티
+```swift
+request.imageCropAndScaleOption = .centerCrop
+```
+
+이 imageCropAndScaleOption같은 경우에는 예를 들어 머신러닝 모델을 만들때 설정하는 것으로 이것은 크게 3가지 있다
+- centerCrop
+- scaleFit
+- scaleFill
+
+첫번째로 모델을 객체로 만들어주고 모델에 보낼 Request를 객체로 만들어준다.
+실제로 우리가 processClassifiacation에서는 우리가 보낸 Request를 받아서 처리해준다. 
+```swift
+let topClassifications = classifications.prefix(2)
+let descriptions = topClassifications.map { classification in
+// Formats the classification for display; e.g. "(0.37) cliff, drop, drop-off".
+    return String(format: "  (%.2f) %@", classification.confidence, classification.identifier)
+}
+ self.classificationLabel.text = "Classification:\n" + descriptions.joined(separator: "\n")
+```
+여기가 실제 결과물이 있는곳이다. 결과물이 있는 부분으로 클래스 중에서 값을 가져온다.
+클래스의 identifier (이름) 분류의 대상으로 정한다. descriptions을 가지고 업데이트를 시켜준 것이다.
