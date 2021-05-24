@@ -23,3 +23,6 @@ iOS앱의 생명주기중 뷰 컨트롤러의 루트뷰가 스토리 보드에�
 생명 주기란 앱의 실행부터 종료하기 까지의 일련의 단계를 의미합니다.
 
 ![다운로드](https://user-images.githubusercontent.com/68891494/118581059-f1ecbc80-b7cb-11eb-8632-39a50d999775.png)
+
+## ViewController의 생명주기
+[ViewControllerLifeCycle]()
