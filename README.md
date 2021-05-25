@@ -4,6 +4,11 @@
 
 ##  분류 
 
+**Design Pattern**
+
+- [MVVM]()
+
+-----
 **Swift** 
 - [swift란(역사,버전)](https://github.com/JiHoonAHN/TIL/blob/main/%20swift/what%20is%20Swift/history%20of%20swift.md)
 - [문법](https://github.com/JiHoonAHN/TIL/blob/main/%20swift/what%20is%20Swift/swift_Grammar.md)
