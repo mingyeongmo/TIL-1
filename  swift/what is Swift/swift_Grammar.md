@@ -2,6 +2,8 @@
 --------
 > 배웠던 문법을 작성하는 곳입니다.
 
+
+ - notion
 <br>
 
 | 문법 | 날짜 | 
@@ -25,3 +27,12 @@
 |[extension](https://www.notion.so/extension-4329ad4005754d99a843868c4d59611e)|2021년 2월 1일|
 |[Networking](https://www.notion.so/Networking-5fd36d4c475b479ebdb5e99807da275b)|2020년 2월 16일|
 |[enum](https://www.notion.so/enum-4e111ea07eb847e79408e2a00ce0a4f9)|2020년 2월 17일|
+
+
+______
+
+## 스위프트를 시작해봅시다.
+
+- github
+
+[스위프트 처음 시작하기]()
