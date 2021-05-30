@@ -4,6 +4,11 @@
 
 ##  분류 
 
+**GitHub**
+- [GitHub란]()
+- [Git-flow]()
+
+-----
 **CocoaPods**
 
 - [CocoaPods이란]()
@@ -17,7 +22,8 @@
 - [MVC]()
 - [MVP]()
 - [MVVM](https://github.com/JiHoonAHN/TIL/blob/main/Design%20Pattern/MVVM.md)
-
+- [VIPER]()
+- [VIP]()
 -----
 **Swift** 
 - [swift란(역사,버전)](https://github.com/JiHoonAHN/TIL/blob/main/%20swift/what%20is%20Swift/history%20of%20swift.md)
@@ -32,3 +38,5 @@
 - [RxSwift를 쓰면 좋은 점](https://github.com/JiHoonAHN/TIL/blob/main/Rxswift/Advantages%20of%20using%20RxSwift.md)
 - [문법](https://github.com/JiHoonAHN/TIL/blob/main/Rxswift/RxSwift_Grammer.md)
 
+----
+**Firebase**
