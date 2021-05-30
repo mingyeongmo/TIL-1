@@ -11,3 +11,5 @@ SDK를 cocoapods으로 가져올수 있다.
 <br>
 
 <img width = "100" src ="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fnmv5i%2FbtqAt6ktkFK%2FBysiKz65BA2rKdwpTxK8r1%2Fimg.png">
+
+외부 개발도구인 SDK를 가져와야 할때 CocoaPods를 대표적으로 사용한다.

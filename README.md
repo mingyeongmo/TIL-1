@@ -19,11 +19,11 @@
 
 **Design Pattern**
 
-- [MVC]()
-- [MVP]()
+- [MVC](https://github.com/JiHoonAHN/TIL/blob/main/Design%20Pattern/MVC.md)
+- [MVP](https://github.com/JiHoonAHN/TIL/blob/main/Design%20Pattern/MVP.md)
 - [MVVM](https://github.com/JiHoonAHN/TIL/blob/main/Design%20Pattern/MVVM.md)
-- [VIPER]()
-- [VIP]()
+- [VIPER](https://github.com/JiHoonAHN/TIL/blob/main/Design%20Pattern/VIPER.md)
+- [VIP](https://github.com/JiHoonAHN/TIL/blob/main/Design%20Pattern/VIP.md)
 -----
 **Swift** 
 - [swift란(역사,버전)](https://github.com/JiHoonAHN/TIL/blob/main/%20swift/what%20is%20Swift/history%20of%20swift.md)
