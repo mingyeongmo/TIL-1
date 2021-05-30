@@ -4,8 +4,18 @@
 
 ##  분류 
 
+**CocoaPods**
+
+- [CocoaPods이란]()
+- [CocoaPods 설치방법]()
+- [CocoaPods를 Xcode에 추가하는 방법]()
+-----
+
+
 **Design Pattern**
 
+- [MVC]()
+- [MVP]()
 - [MVVM](https://github.com/JiHoonAHN/TIL/blob/main/Design%20Pattern/MVVM.md)
 
 -----
