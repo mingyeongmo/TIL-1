@@ -32,7 +32,7 @@
 
 **객체지향이란**
 
-- [객체지향(OOP)](https://github.com/JiHoonAHN/TIL/blob/main/%20swift/what%20is%20Swift/%20Object%20Oriented%20Programing.md)
+- [객체지향(OOP)](https://github.com/JiHoonAHN/TIL/blob/main/%20swift/what%20is%20Swift/object%20Oriented%20Programing.md)
 
 <br>
 
