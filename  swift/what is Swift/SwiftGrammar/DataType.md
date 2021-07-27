@@ -7,6 +7,6 @@
  
 #### 데이터 타입 종류
 
- - [Int & UInt]()
- - [Bool]()
- - 
+ - [Int & UInt](https://github.com/JiHoonAHN/TIL/blob/main/%20swift/what%20is%20Swift/SwiftGrammar/DataType/Int%26UInt.md)
+ - [Bool](https://github.com/JiHoonAHN/TIL/blob/main/%20swift/what%20is%20Swift/SwiftGrammar/DataType/Bool.md)
+ - [Float & Double](https://github.com/JiHoonAHN/TIL/blob/main/%20swift/what%20is%20Swift/SwiftGrammar/DataType/Float%20%26%20Double.md)
