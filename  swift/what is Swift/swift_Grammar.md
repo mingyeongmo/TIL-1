@@ -38,3 +38,5 @@ ______
 [기본 명명 규칙](https://github.com/JiHoonAHN/TIL/blob/main/%20swift/what%20is%20Swift/SwiftGrammar/default%20Naming%20Conventions.md)
 
 [콘솔 로그](https://github.com/JiHoonAHN/TIL/blob/main/%20swift/what%20is%20Swift/SwiftGrammar/Console%20Log.md)
+
+[데이터 타입 기초]()
