@@ -156,11 +156,4 @@ class ViewController: UIViewController {
 >이 부분이 핵심이다.
 이 부분은 여러 제품들을 보관할 수 있다. 단일 구매 품목을 나타내는  .nonConsumable 을 배열에 추가해서 단일 상품들을 등록해준다. 그리고 클로저로 result가 성공했다면 productID를 failure가 떴을때는 error가 뜬다.
 
-<br>
-<br>
-<br>
-<br>
-<br>
 
-
-[전체 코드]()
