@@ -43,3 +43,4 @@ ______
 
 [GCD](https://github.com/JiHoonAHN/TIL/blob/main/%20swift/what%20is%20Swift/GCD.md)
 
+[Lazy Variable]()
