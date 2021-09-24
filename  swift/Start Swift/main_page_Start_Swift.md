@@ -2,3 +2,4 @@
 
 - [StoryBoard란?](https://github.com/JiHoonAHN/TIL/blob/main/%20swift/Start%20Swift/what%20is%20Storyboard.md)
 - [View란?](https://github.com/JiHoonAHN/TIL/blob/main/%20swift/Start%20Swift/What%20is%20View.md)
+- [ViewController의 생명주기](https://github.com/JiHoonAHN/TIL/blob/main/%20swift/Start%20Swift/ViewController_lifecycle.md)
