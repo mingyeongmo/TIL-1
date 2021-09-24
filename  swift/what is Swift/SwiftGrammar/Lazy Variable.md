@@ -69,3 +69,37 @@ print(me.greeting()) // Hello my name is James
 만일 변수가 lazy var greeting : String이 아닌 lazy var greeting:()->String으로 클로저 실행의 결과를 담는 것이 아닌 클로저 자체를 담고 있는 변수라면 [weak self]를 통해 메모리 누수를 방지해주어야 합니다.
 
 또한 값이 아닌 클로저 자체가 메모리에 올라가 있고 self 는 내부에서 계속해서 클래스를 참조하기 때문에 계속 John이 출력이 되는 것이 아닌 James가 출력이 되는 것입니다.
+
+---
+Swift lazy var는 멀티 thread에서 접근시 이니셜라이즈가 한번 불릴거을 보장하지 않는다.
+
+
+### 왜 Swift는 lazy var를 thread safe 하지 않게 만들었을까?
+
+ - 반대 의견 
+    - Thread 로부터 안전한 lazy var은 일부 아키텍처에서 모든 읽기에 대해 메모리 장벽이 필요하다.
+    - 동기화를 위한 추가 공간이 필요하다.
+ - 찬성 의견 
+    - 'lazy' 키워드의 동작은 동시성 프로그래밍을 할 때 lazy를 사용하는 것을 안티패턴으로 보게 만든다. 그리고 thread safe한 지연 초기화를 위한 커스텀 방법은 복잡하니 컴파일러에서 제공해줬으면 한다.
+
+[Lazy var를 thread safe하게 만들어달라는 이슈](https://bugs.swift.org/browse/SR-1042)
+
+#### Swift에서 글로벌 변수는 지연 초기화되며 Thread safe 한가?
+
+
+[Swift globals and static members are atomic and lazily computed](https://www.jessesquires.com/blog/2020/07/16/swift-globals-and-static-members-are-atomic-and-lazily-computed/)
+
+글로벌 변수는 지연 초기화 되고 한번만 초기화 되는것을 보장한다.
+Type Property(static 키워드 사용) 또한 지연 초기화되고 멀티스레드에서 접근할때에도 한번만 초기화된다는 내용이다.
+
+
+[구현](https://developer.apple.com/swift/blog/?id=7)
+
+Atomicity 개념과 thread safe의 개념은 다르다는 것을 의미한다.
+
+Atomicity(원자성) 은 변수의 읽고 쓰기의 무결성을 설명한다는 것이다
+
+- Swift의 글로벌 let 과 static let 는 원자적이고 불변하므로 thread safe 하다고 말할 수 있다.
+
+- 글로벌 var와 static var의 경우 초기화 후 스레드에서 변경될수 있으므로 thread safe하다고 주장하기는 어렵다. 
+
