@@ -47,7 +47,7 @@ git brech 이름 - creat new brech
 
 git checkout 이름 - 이름 brech로 넘어감
 
-git marge brech이름 - brech병합
+git merge brech이름 - brech병합
 
 git rebase brech이름 - berch 재배치
 
